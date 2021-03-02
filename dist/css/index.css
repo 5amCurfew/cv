@@ -1,0 +1,161 @@
+html {
+  display: flex;
+  box-sizing: border-box;
+  font-family: "Lucida Console", "Courier New", monospace;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  margin: 0;
+}
+body {
+  margin: 0;
+}
+button {
+  font-family: "Lucida Console", "Courier New", monospace;
+  border: 1px dotted white;
+  background-color: darkblue;
+  color: white;
+}
+
+.fakeButtons {
+  height: 15px;
+  width: 10px;
+  border-radius: 0%;
+  border: 1px solid #000;
+  position: relative;
+  margin: 2.5px;
+  background-color: #ff3b47;
+  border-color: #9d252b;
+  display: inline-block;
+}
+
+.fakeMenu {
+  width: inherit;
+  box-sizing: border-box;
+  height: 20px;
+  background-color: #bbb;
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  margin: 0;
+  width: inherit;
+  height: inherit;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  height: 100vh;
+  grid-template-columns: 100vw;
+  background-color: #008080;
+}
+
+#footer {
+  position: fixed;
+  width: 100vw;
+  height: 42px;
+  bottom: 0;
+  background-color: thistle;
+  display: grid;
+  grid-template-columns: 10fr 90fr;
+}
+
+.dragIcon {
+  position: absolute;
+  z-index: 9;
+  cursor: move;
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 1;
+  justify-items: center;
+}
+.dragBanner {
+  position: absolute;
+  z-index: 9;
+  cursor: move;
+  background-color: transparent;
+}
+#terminal {
+  top: 160px;
+  left: 60px;
+}
+
+#cv {
+  top: 160px;
+  left: 160px;
+}
+
+#contact {
+  top: 160px;
+  left: 240px;
+}
+
+#toepunt {
+  top: 260px;
+  left: 340px;
+}
+
+#metrica {
+  top: 260px;
+  left: 450px;
+}
+
+#dataviz {
+  top: 260px;
+  left: 60px;
+}
+
+#art {
+  top: 260px;
+  left: 180px;
+}
+
+#terminalWindow {
+  top: 20px;
+  left: 750px;
+}
+
+#toepuntWindow {
+  top: 10px;
+  left: 105px;
+  width: 1150px;
+  height: 690px;
+  display: none;
+}
+
+#metricaWindow {
+  top: 90px;
+  left: 105px;
+  width: 1000px;
+  height: 600px;
+  display: none;
+}
+
+#datavizWindow {
+  top: 12px;
+  left: 135px;
+  display: none;
+}
+#artWindow {
+  top: 20px;
+  left: 435px;
+  display: none;
+}
+#cvWindow {
+  top: 10px;
+  left: 570px;
+  width: 800px;
+  height: 700px;
+  display: none;
+}
+
+#start {
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+}
