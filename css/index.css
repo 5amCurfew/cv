@@ -79,48 +79,51 @@ iframe {
   background-color: transparent;
 }
 #terminal {
-  top: 160px;
+  top: 460px;
   left: 60px;
 }
 
 #cv {
-  top: 160px;
+  top: 560px;
   left: 160px;
 }
-
+#chat {
+  top: 560px;
+  left: 420px;
+}
 #contact {
-  top: 160px;
+  top: 560px;
   left: 240px;
 }
 
 #toepunt {
-  top: 260px;
+  top: 660px;
   left: 340px;
 }
 
 #metrica {
-  top: 260px;
+  top: 660px;
   left: 450px;
 }
 
 #dataviz {
-  top: 260px;
+  top: 660px;
   left: 60px;
 }
 
 #art {
-  top: 260px;
+  top: 660px;
   left: 180px;
 }
 
 #terminalWindow {
-  top: 20px;
-  left: 750px;
+  top: 10px;
+  left: 50px;
 }
 
 #toepuntWindow {
   top: 10px;
-  left: 105px;
+  left: 205px;
   width: 1150px;
   height: 690px;
   display: none;
@@ -128,7 +131,7 @@ iframe {
 
 #metricaWindow {
   top: 90px;
-  left: 105px;
+  left: 205px;
   width: 1000px;
   height: 600px;
   display: none;
@@ -136,12 +139,12 @@ iframe {
 
 #datavizWindow {
   top: 12px;
-  left: 135px;
+  left: 675px;
   display: none;
 }
 #artWindow {
   top: 20px;
-  left: 435px;
+  left: 700px;
   display: none;
 }
 #cvWindow {
@@ -151,7 +154,13 @@ iframe {
   height: 700px;
   display: none;
 }
-
+#chatWindow {
+  top: 10px;
+  left: 700px;
+  width: 600px;
+  height: 600px;
+  display: none;
+}
 #start {
   margin-left: 10px;
   margin-top: 5px;
