@@ -2,7 +2,7 @@
   background-color: #151515;
   box-sizing: border-box;
   width: 600px;
-  height: 700px;
+  height: 400px;
   margin: 0;
   padding: 20px;
 }
@@ -71,6 +71,36 @@ p {
 }
 
 .cursor4 {
+  -webkit-animation: blink 1s 11.5s 2 forwards;
+  -moz-animation: blink 1s 11.5s 2 forwards;
+  -o-animation: blink 1s 11.5s 2 forwards;
+  animation: blink 1s 11.5s 2 forwards;
+}
+
+.line5 {
+  color: #f9f9f9;
+  -webkit-animation: type 0.5s 12s steps(20, end) forwards;
+  -moz-animation: type 0.5s 12s steps(20, end) forwards;
+  -o-animation: type 0.5s 12s steps(20, end) forwards;
+  animation: type 0.5s 12s steps(20, end) forwards;
+}
+
+.cursor5 {
+  -webkit-animation: blink 1s 15s 2 forwards;
+  -moz-animation: blink 1s 15s 2 forwards;
+  -o-animation: blink 1s 15s 2 forwards;
+  animation: blink 1s 15s 2 forwards;
+}
+
+.line6 {
+  color: #f9f9f9;
+  -webkit-animation: type 0.5s 13s steps(20, end) forwards;
+  -moz-animation: type 0.5s 13s steps(20, end) forwards;
+  -o-animation: type 0.5s 13s steps(20, end) forwards;
+  animation: type 0.5s 13s steps(20, end) forwards;
+}
+
+.cursor6 {
   -webkit-animation: blink 1s 11.5s infinite;
   -moz-animation: blink 1s 8.5s infinite;
   -o-animation: blink 1s 8.5s infinite;

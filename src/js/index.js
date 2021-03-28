@@ -4,6 +4,7 @@ const obj = [
     'art',
     //'contact',
     'cv',
+    'chat',
     'dataviz',
     'metrica',
     'terminal',
