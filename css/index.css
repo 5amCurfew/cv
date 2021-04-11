@@ -161,10 +161,3 @@ iframe {
   height: 600px;
   display: none;
 }
-#start {
-  margin-left: 10px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  justify-content: center;
-  align-items: center;
-}
