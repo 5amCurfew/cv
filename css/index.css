@@ -122,10 +122,10 @@ iframe {
 }
 
 #toepuntWindow {
-  top: 10px;
+  top: 5px;
   left: 205px;
   width: 1150px;
-  height: 690px;
+  height: 760px;
   display: none;
 }
 
