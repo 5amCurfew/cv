@@ -13,21 +13,21 @@
 
     <div class = 'container'>
 
-        <div id='terminal' class='dragIcon'> <img src = 'https://github.com/5amCurfew/cv/blob/main/dist/public/icons/windowIcon.png?raw=true'> <button onclick="toggleWindow('terminalWindow')">Welcome</button></div>
-        <div id='cv' class='dragIcon'> <img src = 'https://github.com/5amCurfew/cv/blob/main/dist/public/icons/cvIcon.png?raw=true'> <button onclick="toggleWindow('cvWindow')">CV</button></div>
-        <div id='toepunt' class='dragIcon'><img src = 'https://github.com/5amCurfew/cv/blob/main/dist/public/icons/toepuntIcon.png?raw=true'> <button onclick="toggleWindow('toepuntWindow')">Toepunt</button></div>
-        <div id='metrica' class='dragIcon'> <img src = 'https://github.com/5amCurfew/cv/blob/main/dist/public/icons/metricaIcon.png?raw=true'> <button onclick="toggleWindow('metricaWindow')">Metrica-D3</button></div>
+        <div id='terminal' class='dragIcon'> <img src = 'https://github.com/5amCurfew/cv/blob/main/dist/public/icons/windowIcon.png?raw=true'> <button onclick="windowToggle('terminalWindow')">Welcome</button></div>
+        <div id='cv' class='dragIcon'> <img src = 'https://github.com/5amCurfew/cv/blob/main/dist/public/icons/cvIcon.png?raw=true'> <button onclick="windowToggle('cvWindow')">CV</button></div>
+        <div id='toepunt' class='dragIcon'><img src = 'https://github.com/5amCurfew/cv/blob/main/dist/public/icons/toepuntIcon.png?raw=true'> <button onclick="windowToggle('toepuntWindow')">Toepunt</button></div>
+        <div id='metrica' class='dragIcon'> <img src = 'https://github.com/5amCurfew/cv/blob/main/dist/public/icons/metricaIcon.png?raw=true'> <button onclick="windowToggle('metricaWindow')">Metrica-D3</button></div>
 
-        <div id='dataviz' class='dragIcon'> <img src = 'https://github.com/5amCurfew/cv/blob/main/dist/public/icons/datavizIcon.png?raw=true'> <button onclick="toggleWindow('datavizWindow')">Data Viz.</button></div>
-        <div id='art' class='dragIcon'> <img src = 'https://github.com/5amCurfew/cv/blob/main/dist/public/icons/artIcon.png?raw=true'> <button onclick="toggleWindow('artWindow')">Art</button></div>
+        <div id='dataviz' class='dragIcon'> <img src = 'https://github.com/5amCurfew/cv/blob/main/dist/public/icons/datavizIcon.png?raw=true'> <button onclick="windowToggle('datavizWindow')">Data Viz.</button></div>
+        <div id='art' class='dragIcon'> <img src = 'https://github.com/5amCurfew/cv/blob/main/dist/public/icons/artIcon.png?raw=true'> <button onclick="windowToggle('artWindow')">Art</button></div>
 
-        <div id='chat' class='dragIcon'> <img src = 'https://github.com/5amCurfew/cv/blob/main/dist/public/icons/chatIcon.png?raw=true'> <button onclick="toggleWindow('chatWindow')">Chat</button></div>
+        <div id='chat' class='dragIcon'> <img src = 'https://github.com/5amCurfew/cv/blob/main/dist/public/icons/chatIcon.png?raw=true'> <button onclick="windowToggle('chatWindow')">Chat</button></div>
 
 
 
         <div id='terminalWindow' class='dragBanner'>
             <div class=fakeMenu>
-                <button class="fakeButtons fakeClose" onclick="toggleWindow('terminalWindow')"></button>
+                <button class="fakeButtons fakeClose" onclick="windowToggle('terminalWindow')"></button>
             </div>
               <div class="fakeScreen">
                 <p class="line1">$ Hi, my name is Sam and I am a Data Analyst<span class="cursor1">_</span></p>
@@ -47,7 +47,7 @@
 
         <div id='chatWindow' class='dragBanner'>
             <div class=fakeMenu>
-                <button class="fakeButtons fakeClose" onclick="toggleWindow('chatWindow')"></button>
+                <button class="fakeButtons fakeClose" onclick="windowToggle('chatWindow')"></button>
             </div>
             <iframe frameBorder="0" src="https://cv-chat-app.herokuapp.com/"></iframe>
         </div>
@@ -55,21 +55,21 @@
 
         <div id='toepuntWindow' class='dragBanner'>
             <div class=fakeMenu>
-                <button class="fakeButtons fakeClose" onclick="toggleWindow('toepuntWindow')"></button>
+                <button class="fakeButtons fakeClose" onclick="windowToggle('toepuntWindow')"></button>
             </div>
             <iframe frameBorder="0" src="https://5amcurfew.github.io/toepunt-ui/"></iframe>
         </div>
 
         <div id='metricaWindow' class='dragBanner'>
             <div class=fakeMenu>
-                <button class="fakeButtons fakeClose" onclick="toggleWindow('metricaWindow')"></button>
+                <button class="fakeButtons fakeClose" onclick="windowToggle('metricaWindow')"></button>
             </div>
             <iframe frameBorder="0" src="https://5amcurfew.github.io/metrica-d3/"></iframe>
         </div>
 
         <div id='datavizWindow' class='dragBanner'>
             <div class=fakeMenu>
-                <button class="fakeButtons fakeClose" onclick="toggleWindow('datavizWindow')"></button>
+                <button class="fakeButtons fakeClose" onclick="windowToggle('datavizWindow')"></button>
             </div>
             <div class="gallery cf">
                 <div>
@@ -89,7 +89,7 @@
 
         <div id='artWindow' class='dragBanner'>
             <div class=fakeMenu>
-                <button class="fakeButtons fakeClose" onclick="toggleWindow('artWindow')"></button>
+                <button class="fakeButtons fakeClose" onclick="windowToggle('artWindow')"></button>
             </div>
             <div class="gallery cf">
                 <div>
@@ -107,13 +107,37 @@
     </div>
 
     <script>
-        const toggleWindow = (el) => {
-            var x = document.getElementById(el);
-            if (x.style.display === "none") {
+        // Include Segment tracking
+        !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="h24aCRyTilixoJTokZ99d8y55sBcDx5Z";analytics.SNIPPET_VERSION="4.13.2";
+        analytics.load("h24aCRyTilixoJTokZ99d8y55sBcDx5Z");
+        analytics.page();
+        }}();
+
+        // Identify a visitor ref: https://segment.com/docs/connections/spec/identify/#anonymous-id (stored as cookie on machine)
+        analytics.identify({
+            subscriptionStatus: 'inactive'
+        });
+
+        // Event tracking
+        const windowToggle = (window) => {
+
+            var x = document.getElementById(window);
+            console.log(x.style.display);
+
+            if (x.style.display != "block") {
                 x.style.display = "block";
+
+                analytics.track("window_opened", {
+                    windowId: window
+                });
             } else {
                 x.style.display = "none";
+
+                analytics.track("window_closed", {
+                    windowId: window
+                });
             }
+
         }
     </script>
 
