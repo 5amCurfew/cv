@@ -23,6 +23,8 @@
 
         <div id='chat' class='dragIcon'> <img src = 'https://github.com/5amCurfew/cv/blob/main/dist/public/icons/chatIcon.png?raw=true'> <button onclick="windowToggle('chatWindow')">Chat</button></div>
 
+        <div id='fm' class='dragIcon'> <img src = 'https://github.com/5amCurfew/cv/blob/main/dist/public/icons/fmIcon.png?raw=true'> <button onclick="windowToggle('fmWindow')">5am.fm</button></div>
+
 
 
         <div id='terminalWindow' class='dragBanner'>
@@ -65,6 +67,13 @@
                 <button class="fakeButtons fakeClose" onclick="windowToggle('metricaWindow')"></button>
             </div>
             <iframe frameBorder="0" src="https://5amcurfew.github.io/metrica-d3/"></iframe>
+        </div>
+
+        <div id='fmWindow' class='dragBanner'>
+            <div class=fakeMenu>
+                <button class="fakeButtons fakeClose" onclick="windowToggle('fmWindow')"></button>
+            </div>
+            <iframe frameBorder="0" src="hhttps://fm-5am.herokuapp.com/"></iframe>
         </div>
 
         <div id='datavizWindow' class='dragBanner'>

@@ -116,6 +116,11 @@ iframe {
   left: 180px;
 }
 
+#fm {
+  top: 700px;
+  left: 300px;
+}
+
 #terminalWindow {
   top: 10px;
   left: 50px;
@@ -159,5 +164,13 @@ iframe {
   left: 700px;
   width: 600px;
   height: 600px;
+  display: none;
+}
+
+#fmWindow {
+  top: 10px;
+  left: 800px;
+  width: 200px;
+  height: 400px;
   display: none;
 }
