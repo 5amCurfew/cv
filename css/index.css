@@ -116,6 +116,11 @@ iframe {
   left: 180px;
 }
 
+#fm {
+  top: 500px;
+  left: 300px;
+}
+
 #terminalWindow {
   top: 10px;
   left: 50px;
@@ -160,4 +165,13 @@ iframe {
   width: 600px;
   height: 600px;
   display: none;
+}
+
+#fmWindow {
+  top: 10px;
+  left: 700px;
+  width: 250px;
+  height: 350px;
+  display: none;
+  background-color: #fff;
 }
