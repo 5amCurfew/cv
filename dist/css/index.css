@@ -117,7 +117,7 @@ iframe {
 }
 
 #fm {
-  top: 700px;
+  top: 500px;
   left: 300px;
 }
 
@@ -169,8 +169,9 @@ iframe {
 
 #fmWindow {
   top: 10px;
-  left: 800px;
-  width: 200px;
-  height: 400px;
+  left: 700px;
+  width: 250px;
+  height: 350px;
   display: none;
+  background-color: #fff;
 }
