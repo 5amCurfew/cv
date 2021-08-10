@@ -8,7 +8,7 @@ const obj = [
     'dataviz',
     'metrica',
     'terminal',
-    'toepunt',
+    //'toepunt',
     'fm'
 ];
 
